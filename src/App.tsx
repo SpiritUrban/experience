@@ -13,7 +13,7 @@ import './pages/Dev/Dev.css';
 function App() {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename="/experience">
         <div className="app-container">
           <Routes>
             <Route path="/" element={<Home />} />
