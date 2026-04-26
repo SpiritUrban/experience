@@ -11,9 +11,12 @@ import Dev from './pages/Dev/Dev';
 import './pages/Dev/Dev.css';
 
 function App() {
+  // Use basename only in production (GitHub Pages), empty in development
+  const basename = import.meta.env.MODE === 'production' ? '/experience' : '/';
+
   return (
     <Provider store={store}>
-      <Router basename="/experience">
+      <Router basename={basename}>
         <div className="app-container">
           <Routes>
             <Route path="/" element={<Home />} />
